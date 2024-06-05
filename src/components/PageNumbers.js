@@ -1,3 +1,15 @@
+import React from 'react';
+
+/**
+ * PageNumbers component for displaying page numbers.
+ *
+ * @param {Object} props - Component props.
+ * @param {number} props.currentPage - The current page.
+ * @param {number} props.totalCount - The total number of items.
+ * @param {number} props.pageSize - The number of items per page.
+ * @param {Function} props.onPageChange - Function to call when the page changes.
+ * @return {Object} The PageNumbers component.
+ */
 export default function PageNumbers({currentPage, totalCount, pageSize, onPageChange}) {
   const numPages = Math.ceil(totalCount / pageSize);
 

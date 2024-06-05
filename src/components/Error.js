@@ -1,6 +1,16 @@
-import {XCircleIcon} from "@heroicons/react/16/solid";
+import {XCircleIcon} from '@heroicons/react/16/solid';
 
-export default function Error({ error }) {
+import React from 'react';
+import PropTypes from 'prop-types';
+
+/**
+ * Error component for displaying error messages.
+ *
+ * @param {Object} props - Component props.
+ * @param {string} props.error - The error message to display.
+ * @return {Object} The Error component.
+ */
+export default function Error({error}) {
   return (
     <div className="rounded-md bg-red-50 p-4">
       <div className="flex">
@@ -14,3 +24,8 @@ export default function Error({ error }) {
     </div>
   );
 }
+
+
+Error.propTypes = {
+  error: PropTypes.string.isRequired,
+};
